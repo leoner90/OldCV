@@ -1,0 +1,52 @@
+﻿<h4>Addition  information:</h4><hr>
+
+		<table class="table table-striped , table-bordered">
+    <thead>
+      <tr>
+        <th>NAME</th>
+        <th>DESCRIPTION</th>
+        <th>NAME</th>
+        <th>DESCRIPTION</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="row-name3">Language </td>
+    <td>English: middling knowledge.<br>
+        Latvian: good knowledge.<br>
+        Russian: good knowledge.<br>
+        Polish: little bit.</td>
+
+          <td class="row-name3"> PROGRAMMING SKILLS </td>
+      <td >HTML , CSS , BOOTSTRAP , SASS , GIT , JS , AJAX , ANGULAR,JSON , PHP , MSQL</td>
+    
+        
+      </tr>
+      <tr>
+        <td class="row-name3">Good PC skills</td>
+        <td>Ms. Office<br>
+        Office devices</td>
+      
+
+      
+      
+        <td class="row-name3">Hobby</td>
+        <td>guitar playing ,
+        voleibol ,
+        programming</td>
+       
+      </tr>
+      <tr>
+      <td class="row-name3">  All UK documents. </td>
+      <td >Ni , EU passport ,proof of address</td>
+     <td class="row-name2">My own car</td>
+        <td>UK "B" category <br>
+        2 years. (Clean) 
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+
+   

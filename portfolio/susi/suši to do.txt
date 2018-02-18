@@ -1,0 +1,26 @@
+menu table 
+
+
+
+
+SUNDAY
+Fill and correct DB price  NAME DESCRIPTION img! (check img observe) width should be 75% from height
+CODE - Code reorganization delete stupid css SASS , make shour indents is correct  comment (no russian)
+defense login unic session
+анимация навигации
+
+
+_________________________________________
+no js navigation	
+search
+VIDEO player
+SITE FILE MAP  example  index --> load body -- >navigatinon.php & sameheight.php
+make menu as CORUSEL !!(menu cover and then sushi like in restorant) 
+Defense убрать доступ к папкам по типу ad-adver/pages 
+defense by onclick can be send any code in variable in to php
+for ( $i = 0; $i < $_SESSION['i']; $i++) { // onother way to check lenght for email  (for each)
+
+
+
+
+ 

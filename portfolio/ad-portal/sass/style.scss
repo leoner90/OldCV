@@ -1,0 +1,212 @@
+html , body ,  .container-fluid {
+	height: 100%;
+}
+ 
+.container-fluid {
+ 	padding:0;	 	 
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.left-sidebar {   
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,2b2b2b+15,2b2b2b+15,000000+40,3f3f3f+68,3f3f3f+68,131313+100 */
+	background: #000000; /* Old browsers */
+	background: -moz-linear-gradient(45deg, #000000 0%, #2b2b2b 15%, #2b2b2b 15%, #000000 40%, #3f3f3f 68%, #3f3f3f 68%, #131313 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, #000000 0%,#2b2b2b 15%,#2b2b2b 15%,#000000 40%,#3f3f3f 68%,#3f3f3f 68%,#131313 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, #000000 0%,#2b2b2b 15%,#2b2b2b 15%,#000000 40%,#3f3f3f 68%,#3f3f3f 68%,#131313 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#131313',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background-attachment: fixed;
+	padding:0;
+}
+
+.logo {
+	padding: 15px 15px 0 20px;
+	-webkit-filter: contrast(4);
+  	filter: contrast(4);	 
+  	border-bottom: 1px #000 solid;
+}
+
+.main-content{ 
+	background: url('../img/bg.jpg') #000   no-repeat left top;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
+	padding-top: 40px;
+	color:#fff;
+	 
+}
+
+.right-sidebar{
+	padding:0;
+	padding-top: 40px;
+	background-color: #696969;
+}
+ 
+
+#myNavbar {
+	padding-right:0;
+}
+
+.navbar {
+	margin-top:70px;
+	margin-bottom:0;
+	z-index: 999;
+}
+ 
+li {
+	background-color:#444;
+	margin-bottom:5px;
+	font-size:18px;
+	list-style-type: none;
+	&:hover {
+		background-color:#696969;
+	}
+
+
+}
+a{
+	color:#c8c2c2;
+	&:hover{
+		color:#fff;
+		text-decoration:none;
+	}
+}
+
+
+li.nav-pills>li {
+	 
+	font-size:18px;
+}
+
+ .nav-pills>li>a {
+ 	background-color:rgba(0,0,0,0.8);
+ 	color:#c8c2c2;
+	&:hover {
+		color: #ccc;
+		background-color: #337fff ;
+	}
+}
+
+.nav-pills>li.active>a{
+  	background-color: #00316f;
+  	&:focus {
+  		background-color: #00316f;
+  	}
+}
+
+.nav-pills>li>a {
+    border-radius: 0;
+}
+
+
+.tittle {
+	color:#c8c2c2;
+	min-height:10px;
+	text-align:center;
+	background-color:rgba(50,50,50,0.95);
+	border-radius: 25px 25px 0 0 ;
+	font-size: 30px;
+	font-weight:bold;
+	margin-bottom:5px;
+	padding: 15px; // vertical-align
+}
+
+
+.tittleEnd { 
+	min-height:25px; 
+	background-color:rgba(50,50,50,0.95);
+	border-radius:  0 0 25px 25px ;
+	margin-top:5px;
+}
+
+ .row { 
+ 	margin-right:0;
+ }
+
+
+//"list" table style (full cars   flats or vacansies list style)
+ .table-row {
+ 	color:#c8c2c2;
+ 	margin-top: 10px;
+ 	background-color:rgba(0,0,0,0.6);
+ 	border-radius:5px;
+ 	margin-left:0px;
+ 	min-height:80px;
+ 	border: 1px dashed rgba(220,220,220,0.3);
+ }
+
+ .table-img{
+ 	width:100%;
+	height:1px; // если убрать то будет растягивать картинку на 100% вместе с ней и таблицу после чего применит одинаковую высоту всем элементам
+	border-right: 1px dashed rgba(220,220,220,0.5);;
+ }
+
+.table-text {	   
+	font-style: italic;
+}
+
+ .table-price {
+ 	font-weight:bold;
+	border-left: 1px dashed rgba(220,220,220,0.5);;
+	text-align:center;
+ }
+ 
+.text {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+ 
+}
+
+
+
+//adobsereve style
+.adobserve-row-tittle {
+	color:c8c2c2;
+	text-align:center;
+	background-color:rgba(50,50,50,0.95);
+	border-radius: 25px 25px 0 0 ;
+	font-size: 30px;
+	font-weight:bold;
+	padding: 15px; // vertical-align
+}
+
+.adobserve-row-text {
+	 @extend .adobserve-row-tittle;
+	color: #fff;
+	border-radius: 0 ;
+	font-size: 16px;
+}
+
+
+.adobserve-row-price {
+	@extend .adobserve-row-tittle;
+	color: #00008B;
+	border-radius: 0 ;
+}
+
+.adobserve-row-phone {
+	@extend .adobserve-row-tittle;
+	color: #008000;
+	border-radius: 0 ;
+	border-radius:  0 0 25px 25px ;
+ 	 
+}
+
+ //errors
+ #errors , #reg-errors {
+ 	display:none;
+ 	background-color:#333;
+ 	 padding:5px;
+
+ }
+
+ 
+ 
+ 

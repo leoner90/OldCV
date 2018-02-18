@@ -1,0 +1,18 @@
+
+<script type="text/javascript">
+	var dbname =  location.hash.replace('models', '');
+	var dbname =  dbname.replace('#', '');		
+	$.post("pages/returnModel.php",{dbname:dbname},function(data){ var result = JSON.parse(data) ;
+ 		$("#result").html(result); 
+ 	}); 
+ 	$(".tittle").html(dbname.toUpperCase() + ' MODELS'); 
+</script>
+
+<div class="tittle">   </div>
+<span id="result">
+</span>
+ <div class="tittleEnd"> </div>
+<!-- active collor in case of reload or first visit -->
+<script type="text/javascript">
+	activeColor('.cars')
+</script>

@@ -1,0 +1,50 @@
+admaker text defense check correction
+
+mobile optimize 
+
+
+картинки создать папку или делать уникальное имя для  ad  , add radio button No pictures at all and set default picture to db then
+
+
+анимация навигации 
+
+login  unset
+
+SUNDAY
+Fill and correct DB price floating point
+CODE - Code reorganization delete stupid css , make shour indents is correct  comment (no russian)
+
+
+
+
+
+
+
+удаление объявления удалять row с id admaker login
+объявления этого юзера  записывать id AD + login при admaker 
+____________________________________________________________  
+no js navigation									
+NOT ROBOT CHECK
+make badge display a  quantity of ad in a specified table
+angular sorting by
+search
+address line + google show it
+cooces
+SITE FILE MAP  example  index --> load body -- >navigatinon.php & sameheight.php
+pagination   if more then 10 ad on one page
+Defense убрать доступ к папкам по типу ad-adver/pages (simbol replace need php cheack becose javscript can be changed)
+defense login unic session
+Expair объявления
+редактирование объявления
+
+
+
+
+
+
+
+
+
+
+
+ 

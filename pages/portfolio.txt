@@ -1,0 +1,119 @@
+﻿
+<h4>PORTFOLIO</h4><hr>
+<div class="row">
+
+	<div class="portfolio , col-sm-4">
+<a href="portfolio/susi/" target="_blank"> <img class="img-responsive" src="../img/google.png"">	</a><hr>
+		<div class="col-sm-12">
+<table class="table">
+ <tbody>
+    <tr class="try">
+      <td><b>DESCRIPTIONS</b></td>
+      <td>site about car fixing:</td>   
+    </tr>
+
+    <tr class="try">
+      <td><b>TECHOLOGY</b></td>
+      <td>html css php sass git hub acc</td>
+    </tr>
+
+   <tr>
+    	<td colspan="2">
+    		Site link <a href="portfolio/susi/" target="_blank">Suši</a> Or click on image above
+    	</td>
+    <tr>
+
+    <tr>
+	    <td colspan="2">
+	    pull  git@github.com:leoner90/main.git
+	    <br>Or Download code zip: <br><br> 
+	      	<a href="../zip/1.txt" download> 
+				<img  src="../img/downloads.png"">
+			</a> 
+
+		</td>
+	</tr>
+  </tbody>
+</table>
+			
+		</div>	
+	</div>
+
+
+	<div class="portfolio , col-sm-4">
+	<a href="portfolio/auto/" target="_blank"> <img class="img-responsive" src="../img/car.png"  "></a><hr>
+		<div class="col-sm-12">
+<table class="table">
+ <tbody>
+    <tr class="try">
+      <td><b>DESCRIPTIONS</b></td>
+      <td>site about car fixing:</td>   
+    </tr>
+
+    <tr class="try">
+      <td><b>TECHOLOGY</b></td>
+      <td>html css php sass git hub acc</td>
+    </tr>
+
+    <tr>
+    	<td colspan="2">
+    		Site link <a href="portfolio/auto/">auto/</a> Or click on image above
+    	</td>
+    </tr>
+
+    <tr>
+	     <td colspan="2">
+	    pull  git@github.com:leoner90/main.git
+	    <br>Or Download code zip: <br><br> 
+	      	<a href="../zip/1.txt" download> 
+				<img  src="../img/downloads.png"">
+			</a>
+		</td>
+	</tr>
+  </tbody>
+</table>
+			
+		</div>	
+	</div>
+
+	<div class="portfolio , col-sm-4">	
+	<a href="portfolio/ad-portal" target="_blank" > <img class="img-responsive" src="../img/search2.png""></a><hr>
+		<div class="col-sm-12">
+<table class="table" >
+ <tbody>
+      <tr class="try"> 
+      <td>
+        <b>DESCRIPTIONS</b> 
+      </td>
+      <td>site about car fixing:</td>   
+    </tr>
+
+    <tr class="try">
+      <td><b>TECHOLOGY</b></td>
+      <td>html css 
+      php sass git hub acc
+      
+      </td>
+    </tr>
+    <tr>
+    	<td colspan="2">
+    		Site link <a href="portfolio/ad-portal">ad-portal</a> Or click on image above 
+    	</td>
+    </tr>
+    <tr>
+	    <td colspan="2">
+	    pull  git@github.com:leoner90/main.git
+	    <br>Or Download code zip: <br><br>  
+	      	<a href="../zip/1.txt" download> 
+				<img  src="../img/downloads.png"">
+			</a>
+		</td>
+	</tr>
+  </tbody>
+</table>
+			
+		</div>	
+	</div>
+</div>
+
+
