@@ -1,7 +1,6 @@
- 
-
 <?php 
 session_start();
+//IF LOGGED IN REDIRECT TO MAIN PAGE IF NOT LOAD LOGIN FORM INTO POP UP
 if (isset($_SESSION['login'] )) {
    echo '<script> location.hash = "#main"; </script>';
 }
@@ -18,9 +17,10 @@ else {
 
 ?>
 
-
+<!-- LOG IN FUNCTION -->
 <script type="text/javascript">
 function log() {   
+  event.preventDefault();
   var login = $('#login').val(); 
   var password = $('#pwd').val();
   $.post("pages/loginphp.php",{login:login , password:password },function(data){

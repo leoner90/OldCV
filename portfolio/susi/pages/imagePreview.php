@@ -1,54 +1,56 @@
- 
+<!-- POP UP FOR IMAGE PREVIEW -->
 <div  class="ImgPopUp">
-  <!--  вызывает функцию back() -->
+  <!--  ONCLICK CALL FUNCTION BACK() TO CHANGE IMG INSIDE POP UP AT PREVIOUS-->
   <div id="backButton"   >
-  <img class="img-responsive , imgBackButton" src="img/prev.png">
+    <img class="img-responsive , imgBackButton" src="img/prev.png">
   </div>
 
-  <!--  вызывает функцию next() -->
+  <!--  ONCLICK CALL FUNCTION NEXT() O CHANGE IMG INSIDE POP UP AT NEXT-->
   <div id="nextButton">
-  <img   class="img-responsive , imgNextButton"  src="img/next.png">
+    <img   class="img-responsive , imgNextButton"  src="img/next.png">
   </div>
 
   <div  class="ImgPreviewWrapper">
-    <div  style="text-align: right;"><!-- non block element inside block element to avoid that whole line call the function   -->
+    <!-- non block element inside block element to avoid that whole line call the function   -->
+    <div  style="text-align: right;">
       <span class="x-button"  onclick="PopUpHide()">X</span>
     </div> 
-    <div class="ImgPreview"></div>  <!-- main content for images     -->
+    <div class="ImgPreview"><!-- main content for images --></div>  
   </div>
 </div>
 
-
 <script type="text/javascript">
-//Функция отображения PopUp берет название изображение из базы данных row[img1] row[img2] row[img3] row[img4]
+//FUNCTION LOAD IMAGES INTO POP UP WHERE firstImg IS row[img1]  FROM DB , secondImg is row[img2] from db etc.
 function ShowImgPreview(firstImg ,secondImg,thirdImg,fourthImg){
   $(".ImgPopUp").show(250);
-  $(".ImgPreview").html('<img class="img-responsive" width="70%" src="img/'+firstImg+'">'); //показывает первую картинку если нажата 2 картинка то first img =   second img from db
+  $(".ImgPreview").html('<img class="img-responsive" width="70%" src="img/'+firstImg+'">'); 
 
-  //при нажатие на стрелку next
+  //onclick next button
   var i = 0;
   $("#nextButton").on("click", function(){
-    var images = [firstImg, secondImg, thirdImg , fourthImg]; // создаем массив для перебора
-    i++; // при очередном вызови функции next счетчик ++ что бы показать next foto
-    if (i > 3) {i = 0 }; // когда счетчик достигает последней фото то есть 4 то он сбрасывается на 0 тоесть первое фото
+    var images = [firstImg, secondImg, thirdImg , fourthImg]; // create an array for busting
+    i++; //counter to show next photo
+    if (i > 3) {i = 0 }; // when counter is 4 then reset it to 0 , because we have only 4 photos
     $(".ImgPreview").html('<img class="img-responsive" width="70%" src="img/'+ images[i] +'">');
   })
 
-  // при нажатие на стрелку back
+  //onclick  back button
   $("#backButton").on("click", function(){ 
     var images = [firstImg, secondImg, thirdImg , fourthImg];
-    i--;
-    if (i < 0) {i = 3 };
+    i--; //counter to show previus photo
+    if (i < 0) {i = 3 }; //when counter is -1 then reset it to 3 , because we have only 4 photos
     $(".ImgPreview").html('<img class="img-responsive" width="70%" src="img/'+ images[i] +'">');
   });
 }
- 
+
+// function hide pop up on X button onclick
 function PopUpHide(){
   $(".ImgPopUp").hide(250);
 }
 
+//Hide pop up on ESC button
 $(document).keyup(function(e) {
-  if (e.keyCode === 27) $('.ImgPopUp').hide(250);   // esc
+  if (e.keyCode === 27) $('.ImgPopUp').hide(250);
 });
 
 </script>

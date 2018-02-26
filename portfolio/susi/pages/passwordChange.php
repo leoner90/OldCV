@@ -1,12 +1,16 @@
-<div class="errors" style="color:red;"> </div><br>
+<!-- Password change loads into pop up -->
+<div class="errors" style="color:red;"> </div>
+<br>
+<!-- OLD/NEW PASSWORD INPUTS -->
 OLD PASSWORD <input id="oldPassword" type="password" class="form-control" placeholder="Password"><br> 
 NEW PASSWORD <input id="newPassword" type="password" class="form-control" placeholder="Password"> <br>
 REPEAT PASSWORD:<input id="Rnewpassword" type="password" class="form-control" placeholder="Repeat Password" >
 <button class="btn btn-danger" onclick="changePsw()" style="width:75%; border-radius:20px; margin-top:20px;">Change password</button><br><hr>
 
- 
+ <!-- CHANGE PASSWORD FUNCTION-->
 <script type="text/javascript">
 function changePsw() {
+	event.preventDefault();
 	var oldPassword = $("#oldPassword").val();
 	var newPassword = $("#newPassword").val();
 	var Rnewpassword = $("#Rnewpassword").val();

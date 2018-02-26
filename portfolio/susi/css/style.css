@@ -10,7 +10,7 @@ body {
 .wrapper {
   margin-bottom: 30px;
   min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
   box-sizing: border-box;
 }
@@ -21,7 +21,7 @@ body {
   color: #fff;
   margin: 0 auto;
   width: 55%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   box-sizing: border-box;
 }
 
@@ -42,16 +42,35 @@ body {
   text-align: center;
 }
 
-.logo {
-  transition: all 3s linear;
-  -webkit-animation: rotlogo 10s linear infinite;
-}
-
 .main-img {
   transition: all 2s linear;
   -webkit-animation: rotimg 7s linear infinite;
 }
 
+@-webkit-keyframes rotimg {
+  0% {
+    -webkit-transform: rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: rotateY(40deg);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+  }
+}
+.logo {
+  transition: all 3s linear;
+  -webkit-animation: rotlogo 10s linear infinite;
+}
+
+@-webkit-keyframes rotlogo {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
 .navbar-header {
   height: 150px;
   width: 100%;
@@ -68,25 +87,6 @@ body {
   padding: 0;
 }
 
-@-webkit-keyframes rotlogo {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-  }
-}
-@-webkit-keyframes rotimg {
-  0% {
-    -webkit-transform: rotateY(0deg);
-  }
-  50% {
-    -webkit-transform: rotateY(40deg);
-  }
-  100% {
-    -webkit-transform: rotateY(0deg);
-  }
-}
 #headTittle {
   color: #AF0000;
   font-weight: bold;
@@ -145,29 +145,10 @@ body {
     padding-right: 5px;
     font-size: 10px;
   }
-
-  .tittle-row {
-    font-size: 8px;
-    font-weight: normal;
-  }
-
-  .orderlist-row {
-    font-weight: normal;
-    font-size: 8px;
-  }
-
-  .totalsumm-row {
-    font-weight: normal;
-    font-size: 8px;
-  }
 }
 @font-face {
   font-family: brankovic;
   src: url(../fonts/brankovic.ttf);
-}
-@font-face {
-  font-family: Karmakooma;
-  src: url(../fonts/Karmakooma.ttf);
 }
 .PopUp, .ImgPopUp {
   z-index: 9999 !important;
@@ -199,14 +180,14 @@ body {
   cursor: pointer;
 }
 
+.PopUpContent {
+  padding-top: 10%;
+}
+
 .ImgPreviewWrapper {
   background-color: rgba(0, 0, 0, 0.9);
   width: 60%;
   border-radius: 0;
-}
-
-.PopUpContent {
-  padding-top: 10%;
 }
 
 .ImgPreview, .ImgPreview > img {
@@ -214,7 +195,7 @@ body {
 }
 
 #nextButton {
-  background-color: rgba(28, 26, 26, 0.6);
+  background-color: rgba(128, 126, 126, 0.85);
   position: fixed;
   top: 0;
   bottom: 0;
@@ -224,7 +205,7 @@ body {
 }
 
 #backButton {
-  background-color: rgba(28, 26, 26, 0.6);
+  background-color: rgba(128, 126, 126, 0.85);
   position: fixed;
   top: 0;
   bottom: 0;
@@ -276,11 +257,6 @@ td img {
   font-size: 16px;
 }
 
-.del {
-  width: 100%;
-  padding: 0;
-}
-
 table {
   word-break: break-all;
 }
@@ -294,6 +270,12 @@ table {
   font-weight: bold;
 }
 
+.sushi-name {
+  border-bottom: 1px solid #fff;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
 .cardPayCheckout, .cashPayCheckout {
   background-color: #333;
   display: none;
@@ -301,13 +283,14 @@ table {
   padding: 15px;
   margin-bottom: 15px;
 }
-.cardPayCheckout input::-webkit-outer-spin-button,
-.cardPayCheckout input::-webkit-inner-spin-button, .cashPayCheckout input::-webkit-outer-spin-button,
-.cashPayCheckout input::-webkit-inner-spin-button {
-  /* display: none; <- Crashes Chrome on hover */
-  -webkit-appearance: none;
+.cardPayCheckout input::-webkit-outer-spin-button, .cardPayCheckout input::-webkit-inner-spin-button, .cashPayCheckout input::-webkit-outer-spin-button, .cashPayCheckout input::-webkit-inner-spin-button {
   margin: 0;
-  /* <-- Apparently some margin are still there even though it's hidden */
+  -webkit-inner-spin-button-webkit-appearance: none;
+}
+
+.del {
+  width: 100%;
+  padding: 0;
 }
 
 .history {
@@ -334,6 +317,10 @@ table {
 }
 
 @media screen and (max-width: 767px) {
+  *, .sushi-name {
+    font-size: 8px;
+  }
+
   .b-popup .b-popup-content {
     width: 100%;
   }
@@ -366,4 +353,13 @@ table {
   #succes-msg {
     font-size: 10px;
   }
+}
+video {
+  width: 100%;
+  height: 360px;
+  background: transparent url("../video/poster.jpg") no-repeat 0 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

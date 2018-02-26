@@ -1,0 +1,14 @@
+﻿defense login unic session
+no js navigation	
+search
+VIDEO player
+SITE FILE MAP  example  index - load body - navigatinon.php and sameheight.php
+make menu as CORUSEL !!(menu cover and then sushi like in restorant) 
+Defense Remove access to folders by  ad-adver/pages 
+defense by onclick can be send any code in variable in to php
+robot check  + delay to send new mot request or mail
+img prewie vertical align on  mobile size  
+
+
+
+ 

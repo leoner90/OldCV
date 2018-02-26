@@ -1,6 +1,9 @@
 <?php session_start(); ?>
-<div class="wrapper">
-<!-- Bootstrap Menu  + collapse button -->
+<div class="wrapper"> <!-- all page wrapper -->
+
+<!-- Bootstrap Menu/collapse button , 
+also if not logged in -> log in & registraion button (otherwise "my account link") - 
+also if isset  $_SESSION['totalSumm'] - display currently order price -->
   <div class="nav-menu">
     <nav class="navbar navbar-inverse">
         <div class="navbar-header">
@@ -29,8 +32,8 @@
                    echo '0.00 '  ;
                 }
               ?> 
-              </span> &#163 
-              <img src="img/order.png" width="40"  height="30" alt="Корзина">  </a></li>
+              </span> &#163; 
+              <img src="img/order.png" width="40"  height="30" alt="ааОбаЗаИаНаА">  </a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
@@ -54,24 +57,24 @@
   </div>
 <!-- END of Bootstrap Menu  -->
 
+<!-- main container for information(content reloading by ajax function Navigation.js ) -->
   <div class="content" > 
     <noscript> <h1 style="color:red; font-weight: bold;">Sorry, your browser does not support JavaScript! <br>You can't use this site without it!!</h1></noscript>
   </div>
 
+<!-- Footer just design :) -->
   <div class="footer">
   </div>
 </div> <!-- end of wrapper  -->
 
 
-
-
+<!-- AJAX NAVIGATION -->
 <?php include 'Navigation.js';?> 
-<!-- pop up functio -->
+
+<!-- pop up function for log in , registration and change password forms-->
 <?php include 'PopUp.php';?> 
 
-
-
-<!-- LOG OUT -->
+<!-- LOG OUT (php handler on same(this) page! )-->
 <script type="text/javascript">
 function logout() {
   $.post("body.php" ,function(){
@@ -79,19 +82,19 @@ function logout() {
   }) 
 }
 
+//Full  Page reload function
 function bodyReload(){
   $('#body').load('body.php'); // reload bascet logo and basketlist
 }
 </script>
 
-
+<!-- LOG OUT handler -->
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   unset($_SESSION['login']);
+  unset($_SESSION['id']);
 } 
 ?>
 
-
 <!-- bootstrap js CDN-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="LibrariesAndFrameworks/bootstrap.min.js"></script>

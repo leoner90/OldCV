@@ -6,19 +6,19 @@
   <!--  meta tag for mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--   Jqery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="LibrariesAndFrameworks/jquery-3.3.1.min.js"></script>
   <!-- bootstrap css CDN-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link  rel="stylesheet" href="LibrariesAndFrameworks/bootstrap.min.css">
   <!--  My css file -->
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-<!-- shows when order completed -->
-<div id="succes-msg" > Your order processed successfully <br> Thank you for choosing us </div>
- <!-- for ajax full page reloading -->
-<div id="body">
-  <?php include 'body.php' ?>
-</div>
+  <!-- shows when order completed -->
+  <div id="succes-msg" > Your order processed successfully <br> Thank you for choosing us </div>
+   <!-- for ajax full page reloading -->
+  <div id="body">
+    <?php include 'body.php' ?>
+  </div>
 </body>
 </html>
  

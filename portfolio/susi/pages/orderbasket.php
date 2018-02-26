@@ -1,19 +1,22 @@
-<?php 
-session_start();
+<?php session_start();
+
+//$emptybar check if any of $sesion[OrderList] is or isn't empty! 0 = empty , 1 = something there!
 $emptybar = 0;
 if (isset($_SESSION['OrderList'])) {
 	for ( $i = 0; $i < $_SESSION['i']; $i++) { 
 		if (!empty($_SESSION['OrderList'][$i])) {
 			$emptybar = 1; // check if any of $sesion[OrderList] isn't empty!
-			echo $_SESSION['OrderList'][$i];
+			echo $_SESSION['OrderList'][$i]; // if  $sesion[OrderList] not empty - display information!
 		}
 	}
 }
  
-if ($emptybar == 0) { // if all  $sesion[OrderList] array is empty - display backet empty!
+// if all  $sesion[OrderList] array is empty - display backet empty!
+if ($emptybar == 0) { 
 	echo 'YOUR BASKET IS EMPTY';
 }
 
+//if $sesion[OrderList] not empty display table row with Total summ!
 else {
   	echo '<hr> 
   	<table class="table ">
@@ -28,11 +31,9 @@ else {
 		</tr>
 	</table>';
 		
-  
-
-	if (isset($_SESSION['login'])) {
-		echo '
-		
+ //if you are logeed in then you can proceed and pay buy card  or cash , if not - text "you should be logged in to proceed"
+if (isset($_SESSION['login'])) {
+	echo '
 		<button onclick="PayByCardForm()" class="btn btn-success" style="width:100%;"> PAY BY CARD</button><br><br>
 		<div class="cardPayCheckout">
 			<h1 style="font-weight:bold;"> PAY BY CARD </h1>
@@ -107,27 +108,33 @@ else {
 ?>
 
 <script type="text/javascript">
+//limits max lengh of input field , get maxlenght variable when you click on inpit
 function maxlenght(thiss , maxLength){
- if (thiss.value.length > maxLength) thiss.value = thiss.value.slice(0, thiss.maxLength);
+	if (thiss.value.length > maxLength) thiss.value = thiss.value.slice(0, thiss.maxLength);
 }
 
+//Delete one of order item (php handler is on same (this) page)
 function emptyy(index) {  
 	$.post("pages/orderbasket.php",{ index:index },function( ){ 
 		bodyReload(); // reload bascet logo and basketlist
 	});
 }
 
+//pay by card form toggler
 function PayByCardForm(){
 	$('.cashPayCheckout').hide();
 	$('.cardPayCheckout').toggle();
 }
 
+//pay by card form toggler
 function PayByCashForm(){
 	$('.cardPayCheckout').hide();
 	$('.cashPayCheckout').toggle();
 }
 
+//Send info from fields to payByCard.php and display success or errors by return
 function PayByCard() {
+	event.preventDefault();
 	var cardNum = $('#card-number').val(); 
 	var cardName = $('#card-name').val(); 
 	var cardExpMonth = $('#card-exp-months').val(); 
@@ -151,7 +158,9 @@ function PayByCard() {
 
 }
 
+//Send info from fields to payByCash.php and display success or errors by return
 function PayByCash() {
+	 event.preventDefault();
 	 var address = $('#Cashaddres').val(); 
 	 var phone = $('#CashPhone').val(); 
 	 $.post("pages/payByCash.php",{ address:address , phone:phone  },function(data){ 
@@ -170,17 +179,13 @@ function PayByCash() {
 
 </script>
 
-
-
 <!-- Delete one of order -->
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   	if (is_numeric($_POST['index']))  {
   		$i = $_POST['index'];
-		$_SESSION['totalSumm'] =  $_SESSION['totalSumm'] - $_SESSION['summ'][$i] ;
+		$_SESSION['totalSumm'] =  number_format($_SESSION['totalSumm'],2) - number_format($_SESSION['summ'][$i], 2) ;
 		$_SESSION['OrderList'][$i]=''; 
 	}	
 }
 ?>
-
- 

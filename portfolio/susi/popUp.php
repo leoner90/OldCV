@@ -6,12 +6,11 @@
   </div>
 </div>
 
-
+<!-- receives file path and load its content to .PopUpContent -->
 <script type="text/javascript">
-
 function PopUpS(page){
-    $(".PopUp").show(250);
-    $('.PopUpContent').load(page);
+	$(".PopUp").show(250);
+	$('.PopUpContent').load(page);
 }
 
 function PopUpH(){

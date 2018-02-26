@@ -1,8 +1,11 @@
 <?php
 session_start();
+
+//GET INPUT FIELDS VALUE
 $address = htmlspecialchars($_POST['address']);
 $number = htmlspecialchars($_POST['phone']);
 
+//CHECK ON ERRORS
 if (trim($address) == '' OR trim($number) == '') {
 	$errors[] = "Fill  all fields please! <br>";
 }
@@ -11,6 +14,7 @@ if (!is_numeric($number)) {
 	$errors[] = 'Incorrect phone number <br>';
 }
 
+//IF NO ERRORS
 if (empty($errors)) { 
 //Add to user history
 	include 'bdConnect.php';  
@@ -27,11 +31,11 @@ if (empty($errors)) {
 	$headers = "MIME-Version: 1.0" . "\r\n"; //Always set content-type when sending HTML email
 	$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 	$message = '';
-	for ( $i = 0; $i < $_SESSION['i']; $i++) { 
+	for ( $i = 0; $i < sizeof($_SESSION['OrderList']); $i++) { 
 		$message .= $_SESSION['OrderList'][$i];
 	}
 	$message .= '<BR>PHONE NUMBER:'. $number .'<BR> ADDRESS:'. $address .'<BR> Total summ:'. $_SESSION['totalSumm'];
-//  mail("leonid.90@inbox.ru","New Order",$message , headers);
+	mail("leonid.90@inbox.ru","New Order",$message , headers);
 
 //unset whole order variables !
 	unset($_SESSION['summ']) ;
@@ -41,6 +45,7 @@ if (empty($errors)) {
 	exit;
 }
 
+//IF ERRORS
 else {
 	$errors = json_encode($errors);
 	echo $errors;	

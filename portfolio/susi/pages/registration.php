@@ -1,3 +1,4 @@
+<!-- IF LOGПED IN -  REDIRECT TO MAIN PAGE , IF NOT SHOW REGISTRATION FORM -->
 <?php 
 session_start();      
 if (isset($_SESSION['login'] )) {
@@ -5,33 +6,32 @@ if (isset($_SESSION['login'] )) {
 }
 else {
   echo '
-<div class="tittle">REGISTRATION </div> 
-  <div id="reg-errors" style="  color:red; font-size: 15px;line-height: 20px; border: 1px solid black;"></div> <br><br>
-  <form>
-  <label for="login">Email address:</label>
-  <input type="email" class="form-control" id="mail"  >
+  <div class="tittle">REGISTRATION </div> 
+    <div id="reg-errors" style="  color:red; font-size: 15px;line-height: 20px; border: 1px solid black;"></div> 
+    <br><br>
+    <form>
+      <label for="login">Email address:</label>
+      <input type="email" class="form-control" id="mail"  >
 
+      <label for="login">Your Login:</label>
+      <input type="login" class="form-control" id="reg-login" >
 
-  <label for="login">Your Login:</label>
-  <input type="login" class="form-control" id="reg-login" >
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="password" >
 
-
-  <label for="pwd">Password:</label>
-  <input type="password" class="form-control" id="password" >
-
-
-  <label for="r-pwd">Repeat Password:</label>
-  <input type="password" class="form-control" id="Rpassword" >
-<br>
-
-<button onclick="reg()" type="submit" class="btn btn-success">Registration</button>
-</form>
-';}
+      <label for="r-pwd">Repeat Password:</label>
+      <input type="password" class="form-control" id="Rpassword" >
+      <br>
+      <button onclick="reg()" type="submit" class="btn btn-success">Registration</button>
+  </form>'
+;}
 
 ?>
 
+<!-- REGISTRATION FUNCTION -->
 <script type="text/javascript">
 function reg() {
+  event.preventDefault();
   var email = $('#mail').val();
   var login = $('#reg-login').val();    
   var password = $('#password').val();
