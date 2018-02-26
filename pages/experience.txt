@@ -1,13 +1,13 @@
-﻿<div class="row">
+<div class="row">
 <div class="col-xs-12">
-<h4>Working expierience:</h4><hr>
+<h4>Working experience:</h4><hr>
 <table class="table-responsive, table table-striped , table-bordered">
   <thead>
     <tr>
-      <th>COMPANY NAME</th>
-      <th>WORK TIME</th>
-      <th>WEB SITES</th>
-      <th>RESPONSABILITY</th>
+      <th class="col-xs-2">COMPANY NAME</th>
+      <th class="col-xs-2">WORKED TIME</th>
+      <th class="col-xs-2">WEB SITE</th>
+      <th class="col-xs-6">RESPONSABILITY</th>
     </tr>
   </thead>
   <tbody>
@@ -17,7 +17,7 @@
       <td class="work-time">09.2011 – 08.2012 </td>
       <td>http://kruza.lv <br> http://amurs.lv</td>
       <td>  
-          Building material shop  work with customers , invoice preparation, regulation of prices. 
+          Building material shop . Work with customers , invoice preparation, regulation of prices. 
           Responsible for whole Online Store  
       </td>
     </tr>
@@ -47,12 +47,12 @@
     <tr>
       <td class="row-name"> NATIONWIDE:<br> (Epsom coaches group) </td>
       <td class="work-time">   10.2013-03.2017 </td>
-      <td>  http://www.nationwidefm.com  
+      <td>  http://www.nationwidefm.com <br>  
          http://www.epsomcoaches.com
       </td>
       <td>
-        Cleaning : Bus cleaning inside and outside  – 5 months.<br>
-        Fueller: Diesel refueling – 1 year 7 months <br>
+        Cleaning : Bus cleaning inside and outside  – 5 months.<br><br>
+        Fueller: Diesel refueling – 1 year 7 months <br><br>
         Bus Shunter (driving / parking) - 1 year 5 months   
       </td>
     </tr>

@@ -1,51 +1,84 @@
-﻿<h4>Addition  information:</h4><hr>
+<h4>Addition  information:</h4><hr>
 
-		<table class="table table-striped , table-bordered">
-    <thead>
-      <tr>
-        <th>NAME</th>
-        <th>DESCRIPTION</th>
-        <th>NAME</th>
-        <th>DESCRIPTION</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="row-name3">Language </td>
-    <td>English: middling knowledge.<br>
-        Latvian: good knowledge.<br>
-        Russian: good knowledge.<br>
-        Polish: little bit.</td>
+<table class="table table-striped , table-bordered">
+<thead>
+  <tr>
+    <th class="col-xs-2">NAME</th>
+    <th class="col-xs-4">DESCRIPTION</th>
+    <th class="col-xs-2">NAME</th>
+    <th class="col-xs-4">DESCRIPTION</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="row-name3 ">Languages </td>
+    <td style="vertical-align: middle;">
+      English: middling knowledge.<br><br>
+      Latvian: middling knowledge.<br><br>
+      Russian: good knowledge.<br><br>
+      Polish: little bit.
+    </td>
+    <td class="row-name3" > PROGRAMMING SKILLS </td>
+    <td style="vertical-align: middle;">
+      HTML / CSS / BOOTSTRAP  
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar"aria-valuenow="60" aria-valuemax="100" style="width:60%">
+          60%
+        </div>
+      </div>
 
-          <td class="row-name3"> PROGRAMMING SKILLS </td>
-      <td >HTML , CSS , BOOTSTRAP , SASS , GIT , JS , AJAX , ANGULAR,JSON , PHP , MSQL</td>
-    
-        
-      </tr>
-      <tr>
-        <td class="row-name3">Good PC skills</td>
-        <td>Ms. Office<br>
-        Office devices</td>
-      
+      GIT / JS / AJAX / SASS 
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar"aria-valuenow="40"  aria-valuemax="100" style="width:40%">
+          40%
+        </div>
+      </div>
 
-      
-      
-        <td class="row-name3">Hobby</td>
-        <td>guitar playing ,
-        voleibol ,
-        programming</td>
-       
-      </tr>
-      <tr>
-      <td class="row-name3">  All UK documents. </td>
-      <td >Ni , EU passport ,proof of address</td>
-     <td class="row-name2">My own car</td>
-        <td>UK "B" category <br>
-        2 years. (Clean) 
-        </td>
-      </tr>
-    </tbody>
-  </table>
+       PHP / MSQL
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar"aria-valuenow="40" aria-valuemax="100" style="width:40%">
+          30%
+        </div>
+      </div>
+
+
+       ANGULAR / JSON 
+       <div class="progress">
+          <div class="progress-bar progress-bar-striped active" role="progressbar"aria-valuenow="30" aria-valuemax="100" style="width:30%">
+            20%
+          </div>
+        </div>
+      </td> 
+  </tr>
+
+  <tr>
+    <td class="row-name3">Good PC skills</td>
+    <td style="vertical-align: middle;">
+      Ms. Office<br>
+      Office devices
+    </td>
+  
+    <td class="row-name3">
+      Hobby
+    </td>
+    <td style="vertical-align: middle;">
+      guitar playing ,
+      voleibol ,
+      programming
+    </td>
+  </tr>
+
+  <tr>
+    <td class="row-name3">  All UK documents. </td>
+    <td style="vertical-align: middle;">Ni , EU passport ,proof of address</td>
+    <td class="row-name2">My own car</td>
+    <td>
+      UK "B" category <br>
+      2 years. (Clean) 
+    </td>
+  </tr>
+</tbody>
+</table>
 
   
 

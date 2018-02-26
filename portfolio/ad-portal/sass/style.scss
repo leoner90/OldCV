@@ -1,18 +1,31 @@
-html , body ,  .container-fluid {
+//BASIC BLOCKS
+html , body , .container-fluid {
 	height: 100%;
+}
+
+body {
+	background-color:#000;
 }
  
 .container-fluid {
  	padding:0;	 	 
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+.main-content{ 
+	background: url('../img/bg.jpg') #000   no-repeat left top;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
+	padding-top: 40px;
+	color:#fff;	 
 }
 
+.row { 
+ 	margin-right:0;
+}
+
+// LEFT SIDEBAR AND MENU
 .left-sidebar {   
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,2b2b2b+15,2b2b2b+15,000000+40,3f3f3f+68,3f3f3f+68,131313+100 */
 	background: #000000; /* Old browsers */
@@ -29,25 +42,8 @@ input::-webkit-inner-spin-button {
 	-webkit-filter: contrast(4);
   	filter: contrast(4);	 
   	border-bottom: 1px #000 solid;
+  	display:block;
 }
-
-.main-content{ 
-	background: url('../img/bg.jpg') #000   no-repeat left top;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
-	background-attachment: fixed;
-	padding-top: 40px;
-	color:#fff;
-	 
-}
-
-.right-sidebar{
-	padding:0;
-	padding-top: 40px;
-	background-color: #696969;
-}
- 
 
 #myNavbar {
 	padding-right:0;
@@ -67,10 +63,9 @@ li {
 	&:hover {
 		background-color:#696969;
 	}
-
-
 }
-a{
+
+a {
 	color:#c8c2c2;
 	&:hover{
 		color:#fff;
@@ -78,9 +73,7 @@ a{
 	}
 }
 
-
 li.nav-pills>li {
-	 
 	font-size:18px;
 }
 
@@ -104,7 +97,7 @@ li.nav-pills>li {
     border-radius: 0;
 }
 
-
+//PAGE TITTLES
 .tittle {
 	color:#c8c2c2;
 	min-height:10px;
@@ -117,7 +110,6 @@ li.nav-pills>li {
 	padding: 15px; // vertical-align
 }
 
-
 .tittleEnd { 
 	min-height:25px; 
 	background-color:rgba(50,50,50,0.95);
@@ -125,12 +117,27 @@ li.nav-pills>li {
 	margin-top:5px;
 }
 
- .row { 
- 	margin-right:0;
- }
+//RIGHT SIDEBAR
+.right-sidebar{
+	padding:0;
+	padding-top: 40px;
+	background-color: #696969;
+}
 
+.loginName {
+	color:#ccc; 
+	text-shadow: 2px 2px blue;
+	font-size:25px; 
+	padding:5px;
+}
 
-//"list" table style (full cars   flats or vacansies list style)
+.avatar {
+	height:200px;
+	 width:100%;
+	 padding:1px;
+}
+ 
+//"LIST" PAGE TABLE STYLE
  .table-row {
  	color:#c8c2c2;
  	margin-top: 10px;
@@ -141,49 +148,46 @@ li.nav-pills>li {
  	border: 1px dashed rgba(220,220,220,0.3);
  }
 
- .table-img{
+.table-img{
  	width:100%;
-	height:1px; // если убрать то будет растягивать картинку на 100% вместе с ней и таблицу после чего применит одинаковую высоту всем элементам
-	border-right: 1px dashed rgba(220,220,220,0.5);;
- }
+	height:50px; 
+}
 
 .table-text {	   
 	font-style: italic;
+	vertical-align:middle;
 }
 
  .table-price {
  	font-weight:bold;
-	border-left: 1px dashed rgba(220,220,220,0.5);;
+	border-left: 3px dashed rgba(220,220,220,0.5);;
 	text-align:center;
  }
  
 .text {
-  display: inline-block;
-  vertical-align: middle;
-  line-height: normal;
- 
+	display: inline-block;
+  	vertical-align: middle;
+  	line-height: normal;
 }
 
-
-
-//adobsereve style
+//Adobsereve page style
 .adobserve-row-tittle {
+	word-break: break-all;
 	color:c8c2c2;
 	text-align:center;
 	background-color:rgba(50,50,50,0.95);
 	border-radius: 25px 25px 0 0 ;
-	font-size: 30px;
+	font-size: 13px;
 	font-weight:bold;
 	padding: 15px; // vertical-align
 }
 
 .adobserve-row-text {
-	 @extend .adobserve-row-tittle;
+	@extend .adobserve-row-tittle;
 	color: #fff;
 	border-radius: 0 ;
 	font-size: 16px;
 }
-
 
 .adobserve-row-price {
 	@extend .adobserve-row-tittle;
@@ -195,18 +199,66 @@ li.nav-pills>li {
 	@extend .adobserve-row-tittle;
 	color: #008000;
 	border-radius: 0 ;
-	border-radius:  0 0 25px 25px ;
- 	 
+	border-radius:  0 0 25px 25px ;	 
 }
 
  //errors
- #errors , #reg-errors {
+#errors , #reg-errors {
  	display:none;
  	background-color:#333;
- 	 padding:5px;
+ 	padding:5px;
+}
 
+//Delete the scrolling of digits inputs
+ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {  // // deletes the scrolling of digits inputs
+   -webkit-appearance: none;
+    margin: 0; 
+}
+
+//ADMAKER PAGE (HIDE SELECTS)
+#partition2 , #InfoField, #partition3 ,#image, #image2, #image3, #image4{
+    display: none;
  }
+ 
+ // FOR MOBILE
+@media screen and (max-width: 767px)   {
+  *  {
+      font-size: 10px !important;
+  }
+  
+  #partners,.tittle {
+  	display:none;
+  }
 
+  .logbtn,.regbtn {
+  	width:100% !important;
+  }
+
+  .glyphicon ,  .cmr , .adMaker,.loginName   {
+  	padding-left: 15px;
+  }
+
+  .avatar {
+	display:none;
+  }
+
+  .logo {
+	padding: 0;	 
+  	border-bottom: 0;
+  	height:100px;
+  	margin: 0 auto;
+  	text-align:center;
+  }
+  .navbar {
+  	margin-top:0;
+  }
  
- 
+  .right-sidebar {
+  	padding:0;
+  	h4{
+  		display:none;
+  	}
+  }
+}
+
  

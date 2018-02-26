@@ -1,17 +1,21 @@
-$primary-color: rgba(0, 0, 0, 0.69);
+﻿$primary-color: rgba(0, 0, 0, 0.69);
 $content-width: 60%;
-body {
 
+  /* deletes the scrolling of digits inputs*/
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; 
+}
+
+//basic blocks
+body {
 	background-image: url("../img/bg-car.jpg"); 
-    background-color: #333;
+  background-color: #333;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   background-attachment: fixed; 
 }
-
-//responsive grid constructor
-
 
 .wrapper {
     display: table; 
@@ -20,25 +24,70 @@ body {
     box-sizing: border-box;
 }
 
-.tableImg {
-  width:100%; 
-  height: 200px;
+.wrapper > div {
+    display: table-cell;
+    vertical-align: top;
+    box-sizing: border-box;  /* не поддерживается в CSS2 */
 }
 
-//main menu(top) start
+.content { 
+  background-color: $primary-color; 
+   width: $content-width;
+  word-break: break-all;
+}
 
+/*Page navigation container and Angular Animation   */
+.view{
+   padding:10px;
+  color:#fff;
+  position:absolute;
+  transition: 250ms;
+  width: $content-width;
+  min-height:100%;
+  word-break:break-all;
+
+}
+
+.navAnimation .view.ng-enter{
+  bottom: 100%;
+}
+
+.navAnimation .view.ng-enter.ng-enter-active{
+  bottom: 0%;
+}
+
+.navAnimation .view.ng-leave{
+  bottom: 0%;
+}
+
+.navAnimation .view.ng-leave.ng-leave-active{
+  bottom: -250%;
+}
+
+//HEADER MENU
 .navbar-brand {
 	padding:0;
 }
  
 .navbar {
-    margin-bottom: 0;
-    border-radius:0;
-    background-color: #000;
+  margin-bottom: 0;
+  border-radius:0;
+  background-color: rgba(0,0,0,0.85);
+  li>a {
+    color:#ccc;
+    font-weight:bold;
+    &:hover { 
+      background-color: #000 !important;
+      color:#fff;
+    }
+    &:focus { 
+        background-color: transparent !important;
+    }
+  }
 }
 
+//LEFT SIDEBAR + PSEUDO ELEMENT + SIDEBAR MENU
 .left-sidebar { 
-    padding:20px;
     padding-top:5%;
   	background-color: $primary-color; 
     width: 15%;
@@ -48,8 +97,6 @@ body {
   display:none;
 }
 
-
-// pseudo-element for tilting
 .left-sidebar-fake {
     background-color: $primary-color;
     width: 5%;
@@ -57,13 +104,27 @@ body {
     clip-path: polygon(0 0%, 100% 0, 0% 100%, 0 100%);
 }
 
-.content { 
+#side-menu a {  
+  color: #ccc;
+  display:block;
+  background-color: $primary-color;
+  text-align:center;
+  padding: 10px;
+  text-decoration:none;
+  border-radius:0 15px  15px 0;
+  font-weight:bold;
+  &:hover{
+    background-color:#000;
+    color:red;
+  }
 
-  background-color: $primary-color; 
-   width: $content-width;
-	word-break: break-all;
 }
 
+.button-img {
+  cursor:pointer;
+}
+
+//RIGHT SIDEBAR
 .right-sidebar { 
   padding:20px;
    padding-top:5%;
@@ -74,7 +135,7 @@ body {
 
 }
 
-
+//FOOTER
 .footer {
 	width:100%; // for small screen
 	background-color: rgba(0, 0, 0, 0.85);
@@ -84,15 +145,7 @@ body {
 	right:0;
 }
 
-
-.wrapper > div {
-
-    display: table-cell;
-    vertical-align: top;
-    box-sizing: border-box;  /* не поддерживается в CSS2 */
-}
-
-
+//M.O.T. POP UP
 .PopUp {
   z-index: 9999 !important;
   width:100%;
@@ -123,78 +176,95 @@ body {
   cursor: pointer;
 }
 .PopUpContent{
-  padding-top:10%;
+  padding-top:5%;
 }
 
-
-
-//side menu LINK STYLE
-#side-menu a {	
-	color: yellow;
-	display:block;
-	background-color: $primary-color;
-	text-align:center;
-	padding: 10px;
-	text-decoration:none;
-	&:hover{
-		background-color:#000;
-		color:red;
-	}
+//CAR SERVISING PAGES
+.service-table {
+  background-image: url('../img/servicePage.jpg');
+  background-repeat: no-repeat;
+  min-height: 200px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center; 
+  td {
+    width: 50%; 
+    border: 1px solid #fff;
+    text-align: center; 
+    vertical-align: middle;
+    &:hover {
+      background-color: rgba( 0 , 0 , 0, 0.7);
+    }
+  }
 }
 
-//button book now
-.button-img {
-	cursor:pointer;
+.service-ul > li{
+  list-style: none;
 }
 
-
-/*Page navigation container and Angular Animation   */
-.view{
-   padding:10px;
-  color:#fff;
-  position:absolute;
-  transition: 500ms;
-  width: $content-width;
-  min-height:100%;
-  word-break:break-all;
-
+.service-ul > li:before {
+  content: "✔ ";
 }
 
-.navAnimation .view.ng-enter{
-  bottom: 100%;
+//VIDEO 
+video {
+   width:100%;
+   border-radius: 15px;
+   background:transparent url('../video/poster.jpg') no-repeat 0 0;
+    background-position: center; 
+   -webkit-background-size:cover;
+   -moz-background-size:cover;
+   -o-background-size:cover;
+   background-size:cover;
+   object-fit: cover;
 }
 
-.navAnimation .view.ng-enter.ng-enter-active{
-  bottom: 0%;
+//ALL SMALL TABLE IMAGES-LINK
+.tableImg {
+  width:100%; 
+  height: 150px;
+  cursor:pointer;
 }
 
-.navAnimation .view.ng-leave{
-  bottom: 0%;
+//TITTLES
+h5 , h6 , .table-price {
+  font-weight: bold;
+  color:#ccc;
 }
-
-.navAnimation .view.ng-leave.ng-leave-active{
-  bottom: -250%;
-}
-
 
 //FOR MOBILE
 @media screen and (max-width: 767px)   {
-    .right-sidebar , .left-sidebar-fake  {
-        display: none !important;    
-    }
-    .left-sidebar {
-        width:30%;
-        background-color: rgba(0, 0, 0, 0.85);
-         word-break:break-all;
-    }
-    .content {
-        width:70%;
-    }
+  * {
+    font-size: 6px !important;  
+  }
+  
+  td >p {
+    font-size: 3px !important; 
+  }
+     
+  .service-table {
+    min-height:0;
+  }
+
+  .right-sidebar , .left-sidebar-fake  {
+    display: none !important;    
+  }
+
+  .left-sidebar {
+    width:30%;
+    background-color: rgba(0, 0, 0, 0.85);
+    word-break:break-all;
+  }
+
+  .content {
+    word-break:break-all;
+    width:70%;
+  }
 
   .view{
-    text-align:center;
+    word-break:break-all;
     width:70%;
-
   }
 
   .send-mail{
@@ -202,8 +272,12 @@ body {
   }
 
   .tableImg {
-  width:100%; 
-  height: 50px;
-}
+    width:100%; 
+    height: 50px;
+  }
+
+  .wrapper {
+    font-size:10px;
+  }
 
 }

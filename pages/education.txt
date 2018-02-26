@@ -1,27 +1,27 @@
-﻿<h4>Education:</h4><hr>
-	 	 <table class="table table-striped , table-bordered">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Years</th>
-        <th>Kind</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="row-name2">92 public school</td>
-        <td>1998 – 2007</td>
-        <td>Primary education </td>
-      </tr>
-      <tr>
-        <td class="row-name2">Riga State Technical School</td>
-        <td>2007 – 2011 </td>
-        <td>Middle special education Accountant  </td>
-      </tr>
-      <tr>
-        <td class="row-name2">Self education</td>
-        <td>10.2017-12.2017</td>
-        <td>Front end / Back end </td>
-      </tr>
-    </tbody>
-  </table>
+<h4>Education:</h4><hr>
+<table class="table table-striped , table-bordered">
+  <thead>
+    <tr>
+      <th class="col-xs-4">Name</th>
+      <th class="col-xs-4">Years</th>
+      <th class="col-xs-4">Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="row-name2">92 public school</td>
+      <td class="text-center">1998 – 2007</td>
+      <td>Primary education </td>
+    </tr>
+    <tr>
+      <td class="row-name2">Riga State Technical School</td>
+      <td class="text-center">2007 – 2011 </td>
+      <td>Middle special education Accountant  </td>
+    </tr>
+    <tr>
+      <td class="row-name2">Self education :)</td>
+      <td class="text-center">11.2017 - 03.2018</td>
+      <td>Html, Bootstrap, Css, Sass, Git, Js, Ajax, jqery, Php, Mysql, Portfolio</td>
+    </tr>
+  </tbody>
+</table>

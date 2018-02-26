@@ -1,21 +1,21 @@
-
 @mixin gradients() {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4c4c4c+0,595959+12,666666+32,474747+37,2c2c2c+37,474747+37,474747+37,474747+38,474747+38,474747+38,474747+39,474747+39,2b2b2b+40,474747+41,474747+42,474747+42,474747+42,2c2c2c+44,2c2c2c+44,2c2c2c+44,2c2c2c+44,2b2b2b+46,2b2b2b+48,2b2b2b+48,111111+60,111111+80,000000+90,000000+90,1c1c1c+100,131313+100,1c1c1c+100 */
-background: rgb(76,76,76); /* Old browsers */
-background: -moz-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 32%, rgba(71,71,71,1) 37%, rgba(44,44,44,1) 37%, rgba(71,71,71,1) 37%, rgba(71,71,71,1) 37%, rgba(71,71,71,1) 38%, rgba(71,71,71,1) 38%, rgba(71,71,71,1) 38%, rgba(71,71,71,1) 39%, rgba(71,71,71,1) 39%, rgba(43,43,43,1) 40%, rgba(71,71,71,1) 41%, rgba(71,71,71,1) 42%, rgba(71,71,71,1) 42%, rgba(71,71,71,1) 42%, rgba(44,44,44,1) 44%, rgba(44,44,44,1) 44%, rgba(44,44,44,1) 44%, rgba(44,44,44,1) 44%, rgba(43,43,43,1) 46%, rgba(43,43,43,1) 48%, rgba(43,43,43,1) 48%, rgba(17,17,17,1) 60%, rgba(17,17,17,1) 80%, rgba(0,0,0,1) 90%, rgba(0,0,0,1) 90%, rgba(28,28,28,1) 100%, rgba(19,19,19,1) 100%, rgba(28,28,28,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 32%,rgba(71,71,71,1) 37%,rgba(44,44,44,1) 37%,rgba(71,71,71,1) 37%,rgba(71,71,71,1) 37%,rgba(71,71,71,1) 38%,rgba(71,71,71,1) 38%,rgba(71,71,71,1) 38%,rgba(71,71,71,1) 39%,rgba(71,71,71,1) 39%,rgba(43,43,43,1) 40%,rgba(71,71,71,1) 41%,rgba(71,71,71,1) 42%,rgba(71,71,71,1) 42%,rgba(71,71,71,1) 42%,rgba(44,44,44,1) 44%,rgba(44,44,44,1) 44%,rgba(44,44,44,1) 44%,rgba(44,44,44,1) 44%,rgba(43,43,43,1) 46%,rgba(43,43,43,1) 48%,rgba(43,43,43,1) 48%,rgba(17,17,17,1) 60%,rgba(17,17,17,1) 80%,rgba(0,0,0,1) 90%,rgba(0,0,0,1) 90%,rgba(28,28,28,1) 100%,rgba(19,19,19,1) 100%,rgba(28,28,28,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 32%,rgba(71,71,71,1) 37%,rgba(44,44,44,1) 37%,rgba(71,71,71,1) 37%,rgba(71,71,71,1) 37%,rgba(71,71,71,1) 38%,rgba(71,71,71,1) 38%,rgba(71,71,71,1) 38%,rgba(71,71,71,1) 39%,rgba(71,71,71,1) 39%,rgba(43,43,43,1) 40%,rgba(71,71,71,1) 41%,rgba(71,71,71,1) 42%,rgba(71,71,71,1) 42%,rgba(71,71,71,1) 42%,rgba(44,44,44,1) 44%,rgba(44,44,44,1) 44%,rgba(44,44,44,1) 44%,rgba(44,44,44,1) 44%,rgba(43,43,43,1) 46%,rgba(43,43,43,1) 48%,rgba(43,43,43,1) 48%,rgba(17,17,17,1) 60%,rgba(17,17,17,1) 80%,rgba(0,0,0,1) 90%,rgba(0,0,0,1) 90%,rgba(28,28,28,1) 100%,rgba(19,19,19,1) 100%,rgba(28,28,28,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#1c1c1c',GradientType=0 ); /* IE6-9 */
+	background: rgb(76,76,76); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 32%, rgba(71,71,71,1) 37%, rgba(44,44,44,1) 37%, rgba(71,71,71,1) 37%, rgba(71,71,71,1) 37%, rgba(71,71,71,1) 38%, rgba(71,71,71,1) 38%, rgba(71,71,71,1) 38%, rgba(71,71,71,1) 39%, rgba(71,71,71,1) 39%, rgba(43,43,43,1) 40%, rgba(71,71,71,1) 41%, rgba(71,71,71,1) 42%, rgba(71,71,71,1) 42%, rgba(71,71,71,1) 42%, rgba(44,44,44,1) 44%, rgba(44,44,44,1) 44%, rgba(44,44,44,1) 44%, rgba(44,44,44,1) 44%, rgba(43,43,43,1) 46%, rgba(43,43,43,1) 48%, rgba(43,43,43,1) 48%, rgba(17,17,17,1) 60%, rgba(17,17,17,1) 80%, rgba(0,0,0,1) 90%, rgba(0,0,0,1) 90%, rgba(28,28,28,1) 100%, rgba(19,19,19,1) 100%, rgba(28,28,28,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 32%,rgba(71,71,71,1) 37%,rgba(44,44,44,1) 37%,rgba(71,71,71,1) 37%,rgba(71,71,71,1) 37%,rgba(71,71,71,1) 38%,rgba(71,71,71,1) 38%,rgba(71,71,71,1) 38%,rgba(71,71,71,1) 39%,rgba(71,71,71,1) 39%,rgba(43,43,43,1) 40%,rgba(71,71,71,1) 41%,rgba(71,71,71,1) 42%,rgba(71,71,71,1) 42%,rgba(71,71,71,1) 42%,rgba(44,44,44,1) 44%,rgba(44,44,44,1) 44%,rgba(44,44,44,1) 44%,rgba(44,44,44,1) 44%,rgba(43,43,43,1) 46%,rgba(43,43,43,1) 48%,rgba(43,43,43,1) 48%,rgba(17,17,17,1) 60%,rgba(17,17,17,1) 80%,rgba(0,0,0,1) 90%,rgba(0,0,0,1) 90%,rgba(28,28,28,1) 100%,rgba(19,19,19,1) 100%,rgba(28,28,28,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 32%,rgba(71,71,71,1) 37%,rgba(44,44,44,1) 37%,rgba(71,71,71,1) 37%,rgba(71,71,71,1) 37%,rgba(71,71,71,1) 38%,rgba(71,71,71,1) 38%,rgba(71,71,71,1) 38%,rgba(71,71,71,1) 39%,rgba(71,71,71,1) 39%,rgba(43,43,43,1) 40%,rgba(71,71,71,1) 41%,rgba(71,71,71,1) 42%,rgba(71,71,71,1) 42%,rgba(71,71,71,1) 42%,rgba(44,44,44,1) 44%,rgba(44,44,44,1) 44%,rgba(44,44,44,1) 44%,rgba(44,44,44,1) 44%,rgba(43,43,43,1) 46%,rgba(43,43,43,1) 48%,rgba(43,43,43,1) 48%,rgba(17,17,17,1) 60%,rgba(17,17,17,1) 80%,rgba(0,0,0,1) 90%,rgba(0,0,0,1) 90%,rgba(28,28,28,1) 100%,rgba(19,19,19,1) 100%,rgba(28,28,28,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#1c1c1c',GradientType=0 ); /* IE6-9 */
 }
 
-
-body {box-sizing: border-box;
+body {
+	box-sizing: border-box;
 	background-color:#EEE;
 	padding: 20px;
 	position: relative; 
 	word-wrap: break-word;
 }
-//standart container style
+
+//main container block
 .content-block {
 	background-color:#fff;
 	min-height: 250px;
@@ -31,33 +31,32 @@ body {box-sizing: border-box;
 	line-height: 13px;
 }	
 
-
 //cv image
 .avatar {
     margin: 0 auto;
 }
 
- h5 {
+//tittles
+h5 {
 	font-weight: bold;	
 }
 
 h4 {
 	text-align:center;
 	font-weight: bold;
-	 text-shadow: 1px 1px #e60000;
+	text-shadow: 1px 1px #e60000;
 }
-.portfolio {
-	
+
+//portfolio
+.portfolio {	
 	min-height: 300px;	 
 	border: 1px #000 solid;
 	background-repeat: no-repeat;
 	&:hover {
 		background-color: #333;
 		color: red;
-	}
-	
+	}	
 }
-
 
 //navigation menu
 .navbar {
@@ -65,124 +64,108 @@ h4 {
 	background-color: #4d0000;
 	border-radius: 0 0 20px 20px;
 	box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-
 }
 
-  .affix {
+.affix {
     top: 0;
     left: 0;
     width: 100%;
     z-index: 9999 !important;
     border-radius: 0 0 10px 10px;
-  }
+}
 
 .nav-menu {
 	@include gradients();
 	height: 120px;
 	padding:0px;
 	border: 10px #6A7070 solid;
-	 border-bottom:0px;
+	border-bottom:0px;
 	padding-top:75px;
 }
 
-
-.navbar-inverse .navbar-nav>.active>a {
-	background-color:red;
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    color: #fff;
+    background-color: #730000;
 }
 
-
 //table
- th{
+th {
 	text-align:center;	
  	background-color:#990000;
  	color: #9d9d9d
 }
+
 .row-name {
 	font-weight: bold;
-
 	background-color: #d2ffff;
-
 }
+
 .row-name2  {
 	font-weight: bold;
 	background-color: #d2ffff;
 }
 
-
 table {
 	 word-break: break-all;
 }
+
 .row-name3  {
 	font-weight: bold;
 	background-color: #d2ffff;
-
+	vertical-align: middle !important;
 }
+
 .work-time {	
 	text-align:center;
 }
 
-
- img { 
-  display: block;
+//center images
+img { 
     margin: 0 auto;
 }
   
-
-
 //popup
-.b-popup{
-	z-index: 9999 !important;
-    width:100%;
-    min-height:100%;
-    background-color: rgba(0,0,0,0.8);
-    overflow:hidden;
-    position:fixed;
-    top:0px;
-    left: 0;
+.PopUp {
+ 	z-index: 9999 !important;
+	width:100%;
+	min-height:100%;
+	background-color: rgba(0,0,0,0.8);
+	overflow:auto;
+	position:fixed;
+	top:0;
+	left: 0;
+	right: 0;
+	bottom:0;
 	display: none;
-
+}
  
- .b-container{
-    width:200px;
-    height:150px;
-    background-color: #ccc;
-    margin:0px auto;
-    padding:10px;
-    font-size:30px;
-    color: #fff;
-  
-}
-
-}
-.b-popup .b-popup-content{  
+ .PopUpWrapper {
+	color:#a7a7a7;
 	text-align: center;
-    margin:50px auto 0px auto;
-    width:700px;
-    min-height: 500px;
-    padding:10px;
-    background-color: #c5c5c5;
-    border-radius:5px;
-    box-shadow: 0px 0px 10px #000;
+	margin: 0 auto;
+	width: 50%;
+	min-height: 100%;
+	padding:10px;
+	background-color: #333;
+	border-radius:10px;
 }
 
-
- 
-
-
-
-
-//make same height in row in 3 separeted tables
-.try {
-	height: 100px;
+.x-button{
+	font-size: 20px;
+	cursor: pointer;
 }
 
-@media only screen and (max-width: 700px) {
-    body {
-        background-color: lightblue;
+.PopUpContent{
+	padding:25px;
+  	padding-top:10%;
+}
 
-    }
+@media screen and (max-width: 767px)   {
+  *  {
+      font-size: 4px !important;
+  }
 
-    table {
-    	font-size: 14px;
-  	
-    }}
+  h4{
+  	 font-size: 14px !important;
+  }
+}

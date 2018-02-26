@@ -1,4 +1,5 @@
 <?php session_start(); 
+//GET INPUT FIELDS
 $login = trim($_POST['login']," "); 
 $login = htmlspecialchars($login);
 $password = htmlspecialchars($_POST['password']);
@@ -6,6 +7,7 @@ $Rpassword = htmlspecialchars($_POST['Rpassword']);
 $mail = trim($_POST['email']," ");
 $mail = htmlspecialchars($mail);
 
+//ERRORS CHECK
 if 	($login == '' OR  $mail == '' OR $password =='' OR $Rpassword == ''){
 	$errors[] = 'Fill all fields !! <br>';
 }
@@ -26,11 +28,12 @@ if (strlen($password) < 4) {
 	$errors[] = 'Your   password is too short need 4 or more character  <br>';
 }
 	
-
+//DB CONNECT
 include 'bdConnect.php';  
 $dbname = "users";
 $conn = new mysqli($servername, $username, $serverpassword, $dbname);  
-//проверяем существет ли такой логин или эмаил в базе данных
+
+//Check if such login or email exists in the database IF YES RETURN ERROR
 $sql = "SELECT login, email  FROM usersforadportal";
 $result = $conn->query($sql);
 
@@ -46,7 +49,7 @@ while($row = $result->fetch_assoc()) {
 	}		 
 } 
 
-
+//IF NO ERRORS -> RESTER AND LOG IN USER !
 if (empty($errors)) { 
 	$password = md5($password);
 	$sql = "INSERT INTO usersforadportal (login, password, email) 
@@ -57,9 +60,9 @@ if (empty($errors)) {
 	exit;
 }
 
- else {
- 	$errors = json_encode($errors);
+//IF ERRORS
+else {
+	$errors = json_encode($errors);
 	echo $errors;
- }
-
+}
 ?>

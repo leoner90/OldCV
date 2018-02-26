@@ -1,19 +1,7 @@
-﻿заполнить разделы ( main , service , fix , wheel change, contacts)
-
-css 
-
-mobile optimize  check   send mail button on small display (display none block)
-
-js/php
-email  + robot check 
-живая запись + sent mail
-
-
-CODE - Code reorganization delete stupid css , make shour indents is correct  comment (no russian)
-
-
-_____________________
-languages change
-cooces
+TO DO:
+defense login unic session
+scroll to element
+robot check  + delay to send new mot request or mail
+languages change + $_cookie;
 no js nav
-CALL SAMEHEIGHT FUNCTION BY END OF ANGULAR ANIMATION NOT BY SETTIMEOUT
+CALL SAMEHEIGHT FUNCTION BY END OF ANGULAR ANIMATION NOT BY SETTIMEOUT or delete position absolut on view div

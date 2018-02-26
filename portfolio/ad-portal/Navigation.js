@@ -1,64 +1,47 @@
 <script type="text/javascript">
 
-// обработчик кликов меняет hash
+// onload navigation loading
 $(document).ready(function(){
-  changePage();  //в случаи копирование и вставки ссылки или первого захода на сайт  
-  // $("a").on("click", function(){ //срабатывает при клике на a(ссылку)
-  //   var link = $(this).attr('href'); //записывает в линк содержимое href из a(ссылки)
-
-
-  //  if (!link.includes("http")){  //if contains http link do nofing with hash
-   //   link = "main";
-  //   location.hash = link;    //записывает в hash текущею ссылку
-  //  } 
-    
-  // }); 
+  changePage(); 
 })
 
-
-//смена контента  (срабатывает при смене хэша hashchange event )
+//on hash change call changePage function
 $(window).on('hashchange', function() { 
-changePage(); //при смене  хэша тоесть при клики на ссылку
-
+  changePage(); //при смене  хэша тоесть при клики на ссылку
 })
 
+//get page name from hash and load it into .main-content
 function changePage() {
- 
-  var link = location.hash.replace(/[^a-zA-Z0-9]/g, ""); //delete all simvols
+  var link = location.hash.replace(/[^a-zA-Z0-9]/g, ""); //delete odd simvols and #
   if (link=='' ){ //if hash empty then redirect to main page(first visit for example)
       link = "main";
   } 
  
   if ( link.includes("adObserve")) {
-    link = "adObserve"; // оставит только models для ссылки а для msql в файле list  хеш останется #links/plavknieki 
-  
+    link = "adObserve"; //will leave only adObserve for the link to find file  , but hash will remains how it was for db manipulation in future
   }
 
   else if ( link.includes("lists")) {
-    link = "lists";  // оставит только lists для ссылки а для msql в файле list  хеш останется #links/plavknieki 
+    link = "lists";  //will leave only lists for the link to find file  , but hash will remains how it was for db manipulation in future
   }
 
   else if ( link.includes("models")) {
-   link = "models";// оставит только models для ссылки а для msql в файле list  хеш останется #links/plavknieki 
+   link = "models";//      //will leave only models for the link to find file  , but hash will remains how it was for db manipulation in future
   }
-
-
  
- 
+  //get file by file name and load it into .main-content
   $.get('pages/'+ link + '.php', function(data) { 
-   $('.main-content').hide().html(data).show(0);
-    $(window).scrollTop(0);
-  
+     $('.main-content').hide().html(data).show(0);
+     $(window).scrollTop(0);
      EqualHeight();
-
   })
   
   //If page not exist (if error)
   .fail(function() {
     $.get('pages/404.php', function(data)  { 
-     $('.main-content').hide().html(data).show(0);
-     $(window).scrollTop(0);
-     EqualHeight();
+      $('.main-content').hide().html(data).show(0);
+      $(window).scrollTop(0);
+      EqualHeight();
     })
   })
 }

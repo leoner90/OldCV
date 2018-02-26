@@ -1,4 +1,5 @@
 <?php 
+//recive bd name from models.php and return links withs table names from db (car models)
 include 'bdConnect.php';  
 $dbname = strtolower($_POST['dbname']);
 $conn = new mysqli($servername, $username, $serverpassword , $dbname);  

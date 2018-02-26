@@ -79,8 +79,9 @@ h4 {
   padding-top: 75px;
 }
 
-.navbar-inverse .navbar-nav > .active > a {
-  background-color: red;
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+  color: #fff;
+  background-color: #730000;
 }
 
 th {
@@ -106,6 +107,7 @@ table {
 .row-name3 {
   font-weight: bold;
   background-color: #d2ffff;
+  vertical-align: middle !important;
 }
 
 .work-time {
@@ -113,51 +115,50 @@ table {
 }
 
 img {
-  display: block;
   margin: 0 auto;
 }
 
-.b-popup {
+.PopUp {
   z-index: 9999 !important;
   width: 100%;
   min-height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  overflow: hidden;
+  overflow: auto;
   position: fixed;
-  top: 0px;
+  top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   display: none;
 }
-.b-popup .b-container {
-  width: 200px;
-  height: 150px;
-  background-color: #ccc;
-  margin: 0px auto;
-  padding: 10px;
-  font-size: 30px;
-  color: #fff;
-}
 
-.b-popup .b-popup-content {
+.PopUpWrapper {
+  color: #a7a7a7;
   text-align: center;
-  margin: 50px auto 0px auto;
-  width: 700px;
-  min-height: 500px;
+  margin: 0 auto;
+  width: 50%;
+  min-height: 100%;
   padding: 10px;
-  background-color: #c5c5c5;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px #000;
+  background-color: #333;
+  border-radius: 10px;
 }
 
-@media only screen and (max-width: 700px) {
-  body {
-    background-color: lightblue;
+.x-button {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.PopUpContent {
+  padding: 25px;
+  padding-top: 10%;
+}
+
+@media screen and (max-width: 767px) {
+  * {
+    font-size: 4px !important;
   }
 
-  table {
-    font-size: 14px;
+  h4 {
+    font-size: 14px !important;
   }
-}
-.try {
-  height: 100px;
 }

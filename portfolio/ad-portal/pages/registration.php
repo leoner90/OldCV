@@ -1,67 +1,54 @@
-<?php 
-session_start();      
+<?php session_start();  
+
+// IF LOGGED IN REDIRECT TO MAIN PAGE , OTHERWISE SHOW REGISTRATION FORM
 if (isset($_SESSION['login'] )) {
   echo "Вы успешно залогинены   ".$_SESSION['login'].
-  '<script> 
-    location.hash = "#main"; 
-  </script>';
-
-
+  '<script> location.hash = "#main"; </script>';
 }
 else {
   echo '
+      <div class="tittle">REGISTRATION </div> 
+      <div id="reg-errors" style="  color:red; font-size: 15px;line-height: 20px; border: 1px solid black;"></div> 
+      <br><br>
+      <form>
+        <label for="login">Email address:</label>
+        <input type="email" class="form-control" id="mail"  >
 
-<div class="tittle">REGISTRATION </div> 
+        <label for="login">Your Login:</label>
+        <input type="login" class="form-control" id="reg-login" >
 
-  <div id="reg-errors" style="  color:red; font-size: 15px;line-height: 20px; border: 1px solid black;"></div> <br><br>
-  <form>
-  <label for="login">Email address:</label>
-  <input type="email" class="form-control" id="mail"  >
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="password" >
 
+        <label for="r-pwd">Repeat Password:</label>
+        <input type="password" class="form-control" id="Rpassword" >
+        <br>
 
-  <label for="login">Your Login:</label>
-  <input type="login" class="form-control" id="reg-login" >
-
-
-  <label for="pwd">Password:</label>
-  <input type="password" class="form-control" id="password" >
-
-
-  <label for="r-pwd">Repeat Password:</label>
-  <input type="password" class="form-control" id="Rpassword" >
-<br>
-
-<button onclick="reg()" type="submit" class="btn btn-success">Registration</button>
-</form>
-';}
-
+      <button onclick="reg()" type="submit" class="btn btn-success regbtn">Registration</button>
+    </form>';
+}
 ?>
 
-
+<!-- SEND USER INFORMATION TO REGPHP.PHP TO CHECK AND REGISTER USER -->
 <script type="text/javascript">
 function reg() {
+  event.preventDefault();
   var email = $('#mail').val();
   var login = $('#reg-login').val();    
   var password = $('#password').val();
   var Rpassword = $('#Rpassword').val();  
   $.post("pages/regphp.php",{email: email ,login:login, password:password , Rpassword:Rpassword },function(data,status){
-   if (data == '') {
-    $("body").load("body.php");
-  }
-  else {
-    var xx = JSON.parse(data) ;
-    $("#reg-errors").show().html(xx); 
+    if (data == '') {
+      $("body").load("body.php");
+    }
+    else {
+       var result = JSON.parse(data) ;
+       $("#reg-errors").show().html(result); 
        $(window).scrollTop(0);
-
-  }
-  
+    }
   });
-    
-
-
 }
 
-
-
-    $("li").removeClass("active");
+//REMOVE ACTIVE COLOR FROM ALL LI
+$("li").removeClass("active");
 </script>
