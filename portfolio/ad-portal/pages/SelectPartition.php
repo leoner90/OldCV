@@ -3,7 +3,7 @@
 include 'bdConnect.php'; 
 //if need select cars model return option list for select with car models
 if (isset($_POST['partition2']) ) { 
-	$dbname =  strtolower($_POST['partition']); 
+	$dbname =  strtolower($_POST['partition2']); 
 	$conn = new mysqli($servername, $username, $serverpassword , $dbname);
 	$sql = "SELECT table_name FROM information_schema.tables where table_schema='$dbname'";
 	$result = $conn->query($sql);

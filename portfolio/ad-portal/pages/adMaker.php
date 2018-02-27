@@ -109,6 +109,7 @@ $('#partition2').change(function() {
   // IF FIRST SELECT  NOT CARS - DISPLAY INFO FIELDS
   else {
      $('#InfoField').css("display" , "block");   
+     EqualHeight();
   }       
 })
 
@@ -116,6 +117,7 @@ $('#partition2').change(function() {
 $('#partition3').change(function() {
   unset();
   $('#InfoField').css("display" , "block");
+  EqualHeight();
 })
 
 // IMAGE PREVIEW FUNCTION

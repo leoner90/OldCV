@@ -114,8 +114,10 @@ if (empty($errors)) {
  	}
  	//adding to the database
  	$user = md5($_SESSION['login']);
+ 	$text = str_replace('\'', '"', $text); //to avoid problems with bd (singl quotes)
+ 	$tittle = str_replace('\'', '"', $tittle); //to avoid problems with bd (singl quotes)
 	$sql = "INSERT INTO $TableName (tittle , text , phone , price  , img , img2 , img3 , img4 , user_name ) 
-	VALUES ('$tittle' , '$text' , '$phone' , '$price' , '$targetPath[0]', '$targetPath[1]', '$targetPath[2]', '$targetPath[3]' , '$user' ) "; 
+	VALUES ('$tittle' , '$text' , '$phone' , '$price' , '$targetPath[0]', '$targetPath[1]', '$targetPath[2]', '$targetPath[3]' , '$user') "; 
 	$conn->query($sql); 
 	$last_advert_id = $conn->insert_id;
 	$conn->close();
