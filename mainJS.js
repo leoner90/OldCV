@@ -142,7 +142,6 @@ function get_age(){
     $('#age').text(age); 
   }
 }
-
 // POP UP PARTITION-->
 //EMAIL POP-UP SHOW FUNCTION
 $( "#pop-up-button" ).click(function() {
@@ -174,7 +173,8 @@ $('#send-mail-btn' ).click(function(event){
   $('#timing-err , #success-msg').hide();
   var email = $('.email').val(); 
   var message = $('#email-msg').val();
-  $.post('sendMail.php',{email:email , message:message ,captcha: grecaptcha.getResponse() },function(data){ 
+  var captcha =  grecaptcha.getResponse();
+  $.post('sendMail.php',{email:email ,captcha:captcha  , message:message },function(data){ 
     // in case of success  
     if (data === ''){  
       $('#success-msg').show(0).delay(4000).fadeOut(5000);
@@ -227,17 +227,17 @@ $('#send-mail-btn' ).click(function(event){
   })
 })
 //CALCULATE THE SCALE OF CAPTCHA AND ITS CONTAINER FOR CORRECT WIDTH
-function scale_captcha(elementWidth){
+function scale_captcha(){
   var reCaptchaWidth = 304;
   var containerWidth = $('.container-for-g-recaptcha').width();
-  if(reCaptchaWidth > containerWidth) {
+   
     // calculate the scale
     var captchaScale = containerWidth / reCaptchaWidth;
     // apply the transformation
     $('.g-recaptcha').css({
       'transform':'scale('+captchaScale+')'
     })
-  }
+  
   //delete empty string after scaling
   var myheight = $('#captchaHeightAfterScale')[0].getBoundingClientRect().height;
   $( '.container-for-g-recaptcha' ).height(myheight);

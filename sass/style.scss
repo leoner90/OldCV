@@ -1,0 +1,124 @@
+/*MIXINS*/
+@mixin box-shadow($top, $left, $blur , $spread , $color ) {
+	-webkit-box-shadow: $top $left $blur $spread $color;
+	-moz-box-shadow: $top $left $blur $spread $color;
+	box-shadow: $top $left $blur $spread $color;
+}
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+}
+/*BODY & PAGE PRELOADER*/
+body {
+  font-family: Varela_Round;
+  padding:0;
+  margin :0;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  font-size: 16px;
+  cursor: default;
+  /*left-sidebar & right sidebar color*/
+  background: -moz-linear-gradient(top, rgba(167,168,170,1) 0%, rgba(182,183,186,0.75) 50%, rgba(182,183,186,0.6) 100%);
+  background: -webkit-linear-gradient(top, rgba(167,168,170,1) 0%,rgba(182,183,186,0.75) 50%,rgba(182,183,186,0.6) 100%);
+  background: linear-gradient(to bottom, rgba(167,168,170,1) 0%,rgba(182,183,186,0.75) 50%,rgba(182,183,186,0.6) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#a7a8aa", endColorstr="#99b6b7ba",GradientType=0 );
+  @media screen and (max-width: 768px) {  
+		* {
+	    font-size: 9px !important;
+	  }
+	}
+}
+#page-preloader, #left-preloader , #right-preloader  {
+  z-index: 9990 !important;
+  position: fixed;
+  min-height: 100vh;
+  width: 100%;
+}
+#left-preloader , #right-preloader{
+  background-color: rgba(0, 0, 0, 0.9);
+  width:50%;
+}
+#right-preloader {
+  right: 0;
+}
+.spinner {
+  z-index: 9999 !important;
+  position: absolute;
+  margin: 0  auto;
+  width: 10%;
+  height: 15vh;
+  background: url("../img/spinner.gif")  0 /100% 100% no-repeat;
+  top:45%; 
+  transform: translateY(-45%);
+  left: 50%; 
+  transform: translateX(-50%);
+}
+/*COLUMN SAME HEIGHT (for body & portfolio rows)*/
+.row-eq-height {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; 
+}
+/*LEFT SIDEBAR */
+#left-sidebar {
+  min-height: 100vh; /*sticky footer for BIGEST resolution work with .row-eq-height*/
+  @media screen and (max-width: 438px) {
+	  & {
+	    padding: 0;
+	  }
+	}
+}
+/*LEFT MAIN BAR*/
+@import 'left-main-bar';
+/*POP UP FOR EMAIL*/
+@import 'email-popUp';
+/*RIGHT MAIN BAR*/
+@import 'right-main-bar';
+/*RIGHT SIDEBAR*/
+@import 'right-sidebar';
+/*FONTS*/
+@import 'fonts';
+/*FOOTER*/
+#footer {
+  font-size: 13px;
+  position: fixed; 
+  bottom:0;  
+  left: 8.3333%;
+  right: 8.333%; 
+  height: 30px;
+  width: 83.333%; 
+  background-color: rgba(105,105,105 , 0.9);
+  border-left: 15px solid #404040;
+  border-right: 15px solid #404040;
+  @include border-radius(50px 50px 0 0);
+  z-index: 999; 
+  text-align: center;
+  font-weight: bold;
+  display: table;
+  opacity: 0;
+  @media screen and (max-width: 768px) {  
+	  & {
+	    height: 8px;
+	    border-left: 5px solid #404040;
+	    border-right: 5px solid #404040;
+	    padding-top:4px;
+	  }
+	}
+}
+/*COOKIES IN USE BUTTON & VERTICAL ALIGN FOR MESSAGE*/
+#cookies-btn {
+  font-size: 10px;
+  margin-left: 5px; 
+  padding: 0 15px;
+}
+.table-vertical-align {
+  display: table-cell; 
+  vertical-align: middle;
+}
+/*OTHER*/
+p {
+  margin: 1px; /*revwrite standart bootstrap margin*/
+}

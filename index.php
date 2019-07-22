@@ -7,6 +7,8 @@
   <link rel="shortcut icon" type="image/png" href="favicon.ico">
   <!-- meta tag for mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google captcha -->
+  <script src='https://www.google.com/recaptcha/api.js'></script>
   <!-- bootstrap css CDN-->
   <link  rel="stylesheet" href="LibrariesAndFrameworks/bootstrap.min.css">
   <!-- My css file -->
@@ -62,7 +64,7 @@
               <span class="rus-language "> СВЯЗАТЬСЯ </span>
               <span class="lv-language"> SAZINIETIES </span>
             </button>
-            <p> <small>leonid.gurockin@gmail.com </small></p>
+            <p> <small>leonid.gurockin@gmail.com</small> </p>
           </div> 
           <div class="left-bar-info-row" > 
             <i class="fab fa-skype"></i> 
@@ -74,7 +76,7 @@
             <span class="eng-language"> PHONE NUMBER </span>
             <span class="rus-language "> НОМЕР ТЕЛЕФОНА </span>
             <span class="lv-language"> TELEFONA NUMURS </span>
-            <p>07761461517</p>
+            <p>07591493281</p>
           </div>       
           <div id="address-row"> 
             <span class="glyphicon glyphicon-pushpin"></span> 
@@ -83,10 +85,10 @@
             <span class="lv-language"> ADRESE </span>
             <div class="row">
               <div class="col-xs-12 col-sm-7">
-                <p id="address-section"> 2 revere way <br> Epsom <br> KT19 9RQ </p>     
+                <p id="address-section"> 23 Riddell Court <br> Sheader Drive <br> Salford <br> M5 5BW </p>     
               </div>
               <div class="col-xs-12 col-sm-4">
-                <a target="_blank" href="https://goo.gl/maps/GAHmBGMPyPt">
+                <a target="_blank" href="https://www.google.co.uk/maps/search/23+Riddell+Court+m55bw/@53.4830625,-2.3131082,17z/data=!3m1!4b1">
                   <img id="google-img" class="img-responsive"  src="img/google-maps-logo.png" alt="googleImg">
                 </a>
               </div> 
@@ -302,15 +304,33 @@
           <div class="col"> 
             <span class="glyphicon glyphicon-briefcase"></span>
             <h5 class="eng-language description-section-title">  
-              NATIONWIDE  | 01. 2018 – till now ( Part time , 3 days per week ) .
+              Diamond Bus North West (Manchester) | 05. 2019 – till now.
+            </h5>
+            <p class="eng-language"> Bus Shunter (driving / parking)</p> 
+            <h5 class="rus-language  description-section-title ">
+              Diamond Bus North West (Manchester)  | 05. 2019 – по настоящее время.
+            </h5>
+            <p class="rus-language"> Подгонщик / Парковщик автобусов </p>
+            <h5 class="lv-language description-section-title">
+              Diamond Bus North West (Manchester) | 05. 2019 – līdz šim brīdim.
+            </h5>                          
+            <p class="lv-language" >Autobusu parkotajs.</p> 
+            <p><a target="_blank" href="https://www.diamondbuses.com/north-west/">https://www.diamondbuses.com/north-west/</a></p>
+          </div>
+        </div>
+        <div class="row work right-bar-rows">
+          <div class="col"> 
+            <span class="glyphicon glyphicon-briefcase"></span>
+            <h5 class="eng-language description-section-title">  
+              NATIONWIDE  | 01. 2018 – 05. 2019  ( Part time , 3 days per week ) .
             </h5>
             <p class="eng-language"> Bus Shunter (driving / parking)- "RATP GROUP" garage (Epsom).</p> 
             <h5 class="rus-language  description-section-title ">
-              NATIONWIDE  | 01. 2018 – по настоящее время (неполная занятость 3 дня в неделю).
+              NATIONWIDE  | 01. 2018 – 05. 2019(неполная занятость 3 дня в неделю).
             </h5>
             <p class="rus-language"> Подгонщик / Парковщик автобусов - гараж "RATP GROUP" (Epsom).</p>
             <h5 class="lv-language description-section-title">
-              NATIONWIDE  | 01. 2018 – līdz šim brīdim (nepilna slodze 3 dienas nedēlā).
+              NATIONWIDE  | 01. 2018 – 05. 2019 (nepilna slodze 3 dienas nedēlā).
             </h5>                          
             <p class="lv-language" >Autobusu parkotajs - "RATP GROUP" garāža (Epsom).</p> 
             <p><a target="_blank" href="http://www.nationwidefm.com">www.nationwidefm.com </a></p>
@@ -438,11 +458,32 @@
         </div>
         <div class="col-xs-12 col-sm-4 vertical-align portfolio-borders">    
           <h4 class="eng-language portfolio-text-tittle"> About:</h4>  
-          <p class="eng-language"> Order sushi online , with card or cash payment.</p>
+          <p class="eng-language"> 
+            Order sushi online <br> 
+            Ajax navigation and basket load<br> 
+            Autorisation (change avatar) <br> 
+            Pay by card or cash <br>
+            Card test :<br>
+            (4242 4242 4242 4242)(Stripe).
+          </p>
           <h4 class="rus-language portfolio-text-tittle"> О Cайте:</h4>
-          <p class="rus-language ">Заказывай суши онлайн, оплата картой или наличными.</p>
+          <p class="rus-language ">
+            Заказ суши онлайн<br> 
+            Ajax навигация и загрузка корзины<br>
+            Авторизация (смена аватара  )<br>
+            Оплата картой или наличными<br> 
+            Тестовая карта :<br>
+            (4242 4242 4242 4242)(Stripe).
+          </p>
           <h4 class="lv-language tportfolio-text-tittle"> Par:</h4>
-          <p class="lv-language">Pasūti suši tiešsaistē, maksājiet izmantojot karti vai skaidru naudu.</p>
+          <p class="lv-language">
+            Suši pasūtīšana tiešsaistē <br> 
+            Ajax navigācija un grozu ielāde <br> 
+            Autorizācija (lietotāja attēla maiņa) <br> 
+            Maksājums ar karti vai skaidrā naudā <br> 
+            Testa karte :<br>
+            (4242 4242 4242 4242)(Stripe).
+          </p>
         </div>
         <div class="col-xs-12 col-sm-3 vertical-align portfolio-borders">  
           <h4 class="portfolio-text-tittle"> Pull </h4>
@@ -455,15 +496,15 @@
           <p class="rus-language"> Загрузить код zip:</p>
           <h4 class="lv-language portfolio-text-tittle"> Vai:</h4> 
           <p class="lv-language"> lejupielādējiet kodu zip: </p>  
-          <a href="../files/sushi.zip" download> Sushi.zip</a> 
+          <a href="../files/sushi.zip" download> sushi.zip</a> 
         </div>
       </div> <!-- end of first portfolio -->
       <div class="row , right-bar-rows , row-eq-height , portfolio-section ">
         <div class="col-xs-12 col-sm-2 portfolio-borders "> 
-          <a href="portfolio/auto/" target="_blank"> 
+          <a href="portfolio/carfix/" target="_blank"> 
             <img  class="img-responsive portfolio-img" src="img/carfix.png" alt="portfolioImg">  
           </a>
-          <a  href="portfolio/auto/" target="_blank">
+          <a  href="portfolio/carfix/" target="_blank">
             <span class="eng-language portfolio-links">CarFix link </span> 
             <span class="rus-language portfolio-links">CarFix ссылка </span> 
             <span class="lv-language  portfolio-links"> CarFix saite </span> 
@@ -472,15 +513,22 @@
         <div class="col-xs-12 col-sm-4 vertical-align portfolio-borders">    
           <h4 class="eng-language portfolio-text-tittle"> About:</h4>  
           <p class="eng-language"> 
-            Car repair services , M.O.T. online booking , evacuator services, tire replacement service.
+            Car repair services.<br> 
+            M.O.T. online booking.<br> 
+            AngularJs navigation and Animation.
           </p>
           <h4 class="rus-language  portfolio-text-tittle"> О Cайте:</h4>
           <p class="rus-language ">
-            Услуги по ремонту автомобилей, М.О.Т. онлайн-бронирование, услуги эвакуатора,сервис по замене покрышек.
+            Услуги по ремонту автомобилей<br> 
+            М.О.Т. онлайн-бронирование<br> 
+            AngularJs навигация и Анимация.
           </p>
           <h4 class="lv-language portfolio-text-tittle"> Par:</h4>
           <p class="lv-language">
-            Mehānisko transportlīdzekļu remonta pakalpojumi, М.О.Т. tiešsaistes rezervēšana, evakuators pakalpojumi, riepu nomaiņas serviss.
+            Mehānisko transportlīdzekļu remonta pakalpojumi<br> 
+            М.О.Т. tiešsaistes rezervēšana<br> 
+            AngularJs Navigācija un Animācija.
+
           </p>
         </div>
         <div class="col-xs-12 col-sm-3 vertical-align portfolio-borders">  
@@ -546,7 +594,7 @@
         <span class="rus-language"> СООБЩЕНИЕ ОТПРАВЛЕНО! </span>
         <span class="lv-language"> E-PASTS NOSŪTĪTS! </span>
       </div>
-      <form> 
+      <form>
         <div id="timing-err">
           <img id="timing-err-img" src="img/timingErr.png">
           <span class="eng-language"> Not more than one e-mail per minute! </span>
@@ -575,7 +623,7 @@
           <span class="lv-language"> JUS NAV IZTURĒJUŠI TESTU!  </span>
         </div> 
         <div class="container-for-g-recaptcha">
-           <div data-theme="dark" id="captchaHeightAfterScale" data-size="compact " class="g-recaptcha" data-sitekey="6LfwwXEUAAAAAN6XSS3F_Y1jzf1R3dvcmKy5GWDW"></div> 
+           <div data-theme="dark" id="captchaHeightAfterScale" data-size="compact " class="g-recaptcha" data-sitekey="6LcApK0UAAAAAKRpiva-19tK780nQng25vWZ1GKT"></div> 
         </div>      
         <button id="send-mail-btn" class="btn , btn-success , btn-lg" tabindex="3"> 
           <span class="eng-language">SUBMIT</span>
@@ -593,9 +641,5 @@
 <script src="LibrariesAndFrameworks/bootstrap.min.js"></script>
 <!-- My js file -->
 <script src="mainJS.js"></script>
-<!-- Google captcha -->
-<script src='https://www.google.com/recaptcha/api.js'></script>
-<div id="NO AD" style="display: none;">
 </body>
-</div>
 </html>

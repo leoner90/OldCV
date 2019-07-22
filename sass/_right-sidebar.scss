@@ -1,0 +1,42 @@
+/*SIZE OF LANGUAGE CHANGING IMAGES*/
+#download-pdf-img,
+#rus-language-img,
+#eng-language-img,
+#lv-language-img,
+#scroll-top-img {
+  cursor: pointer; 
+  width: 70%;
+  margin: 0 auto;
+  @media screen and (max-width: 438px) {
+    & {
+      width: 100%;
+    }
+  }
+}
+#fixed-bar {
+  width: 4.166666666665%; 
+  position: fixed; 
+  right: 0;  
+  bottom: 0;
+  top:3%;
+  transform: translateX(-50%);
+}
+/*POSITIONING OF LANGUGE CHANGING IMAGES*/
+#download-pdf-container {
+  height: 25%;
+}
+.change-eng-and-rus-language-container {
+  height: 15%;
+}
+#change-lv-language-container {
+  height: 35%;
+}
+#scroll-top-container {
+  min-height: 10%;
+}
+/*DELETE COL-XS-1 BOOTSTRAP STANDART PADDING ON MOBILE*/
+@media screen and (max-width: 438px) {
+  #right-sidebar {
+    padding: 0;
+  }
+}
